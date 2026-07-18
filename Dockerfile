@@ -5,7 +5,7 @@ FROM nginx:stable-alpine
 RUN mkdir -p /usr/share/nginx/html/app
 
 # Copy application files into directory
-COPY ./app /usr/share/nginx/html/app
+COPY . /usr/share/nginx/html/app
 
 # Change ownership of app directory to a user ID 1001 (common OpenShift non-root user)
 RUN chown -R 1001:0 /usr/share/nginx/html/app \
